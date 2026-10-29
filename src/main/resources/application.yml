@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: contextbridge-mcp
+  ai:
+    mcp:
+      server:
+        name: contextbridge
+        version: 1.0.0
+        type: SYNC
+server:
+  port: ${PORT:8084}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+logging:
+  level:
+    org.springframework.ai.mcp: INFO
