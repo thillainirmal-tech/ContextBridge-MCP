@@ -6,6 +6,14 @@ Production-minded Java MCP server that exposes engineering context through typed
 ![MCP](https://img.shields.io/badge/MCP-Spring_AI-2764FF)
 ![Java](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&logoColor=white)
 
+## Product tour
+
+![ContextBridge MCP inspection console](docs/media/product-tour.gif)
+
+[Open the full-resolution screenshot](docs/media/product-console.jpg) · **Recruiter demo:** connect an MCP client with bearer authentication, enumerate typed tools, inspect service context and preview a deployment without mutation.
+
+> **Deployment status:** tested, containerized and ready for an AWS deployment; no public production endpoint is claimed yet.
+
 ## Tools
 
 | Tool | Safety | Purpose |
