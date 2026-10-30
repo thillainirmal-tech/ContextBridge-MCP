@@ -12,6 +12,8 @@ Production-minded Java MCP server that exposes engineering context through typed
 
 [Open the full-resolution screenshot](docs/media/product-console.jpg) · **Recruiter demo:** connect an MCP client with bearer authentication, enumerate typed tools, inspect service context and preview a deployment without mutation.
 
+[▶ Watch the recorded authenticated demo (5 seconds)](docs/media/runtime-demo.mp4)
+
 > **Deployment status:** tested, containerized and ready for an AWS deployment; no public production endpoint is claimed yet.
 
 ## Tools
