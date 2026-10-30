@@ -3,7 +3,9 @@ WORKDIR /workspace
 COPY . .
 RUN mvn --batch-mode --no-transfer-progress package -DskipTests
 FROM eclipse-temurin:17-jre-alpine
+RUN addgroup -S app && adduser -S app -G app
 WORKDIR /app
 COPY --from=build /workspace/target/contextbridge-mcp-1.0.0.jar app.jar
+USER app
 EXPOSE 8084
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-XX:MaxRAMPercentage=75","-jar","app.jar"]

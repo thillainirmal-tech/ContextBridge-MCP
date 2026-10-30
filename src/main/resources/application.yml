@@ -21,3 +21,5 @@ management:
 logging:
   level:
     org.springframework.ai.mcp: INFO
+contextbridge:
+  api-key: ${CONTEXTBRIDGE_API_KEY}

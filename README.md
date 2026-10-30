@@ -16,11 +16,11 @@ Production-minded Java MCP server that exposes engineering context through typed
 | `previewDeployment` | Dry-run | Plan deployments without mutation |
 | `estimateMonthlyCost` | Pure | Calculate illustrative compute cost |
 
-The server uses the Spring AI MCP WebMVC starter and publishes real MCP tool callbacks. All bundled data is synthetic. No external API key is required.
+The server uses the Spring AI MCP WebMVC starter and publishes real MCP tool callbacks. Remote MCP endpoints require `Authorization: Bearer <CONTEXTBRIDGE_API_KEY>`; health and the inspection landing page remain public. All bundled data is synthetic.
 
 ## Run
 
-`mvn spring-boot:run`
+Set a random `CONTEXTBRIDGE_API_KEY` of at least 24 characters, then run `mvn spring-boot:run`.
 
 Open http://localhost:8084 for the inspection dashboard. Configure an MCP client against the WebMVC MCP transport exposed by Spring AI.
 
@@ -38,7 +38,7 @@ Open http://localhost:8084 for the inspection dashboard. Configure an MCP client
 
 ## Roadmap
 
-- OAuth-protected remote transport
+- OAuth 2.1 resource-server mode for multi-tenant deployments
 - MCP resources for runbooks and service schemas
 - per-tool authorization policies
 - OpenTelemetry tool-call traces
